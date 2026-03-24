@@ -1,15 +1,15 @@
-export function CardProducto(){
+export function CardProducto({producto}){
   return(
     <article className="bg-white overflow-hidden w-full flex flex-col gap-2 rounded-2xl border border-gray-200">
       <div className="w-full aspect-square bg-amber-200"></div>
       <div className="p-2">
-        <h3 className="font-bold uppercase text-blue-500 text-xs">marca</h3>
-        <h4 className="capitalize font-extrabold text-lg text-slate-900">nombre de producto</h4>
+        <h3 className="font-bold uppercase text-blue-500 text-xs">{producto.marca}</h3>
+        <h4 className="capitalize font-extrabold text-lg text-slate-900">{producto.nombre}</h4>
         <div className="mt-5 flex justify-between items-center gap-3">
           <div className="flex flex-col">
             <span className="text-[10px] text-gray-400 font-bold uppercase">Precio</span>
             <span className="text-[#1e293b] font-extrabold text-xl">
-              S./{'45'}
+              S./ {producto.precio}
             </span>
           </div>
 
